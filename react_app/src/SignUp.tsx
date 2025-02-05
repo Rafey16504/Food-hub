@@ -6,7 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const SignUp = () => {
   const currentDate = new Date().toISOString().split("T")[0];
   return (
-    <div className="w-screen h-screen flex items-center justify-center relative">
+    <div className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
       {/* Decorative SVGs */}
       <img
         src="/pizza_inverted.svg"
@@ -61,10 +61,10 @@ const SignUp = () => {
             placeholder="Password"
             className="bg-transparent border-b-2 border-gray-200 focus:outline-none focus:border-orange-500 w-full pb-2 font-grotesk"
           />
-          <div className="relative w-full">
+          <div className="relative w-full flex flex-row">
             <label
               htmlFor="dob"
-              className="absolute left-0 text-gray-500  -translate-y-5 scale-85 font-grotesk"
+              className="text-gray-500 font-grotesk"
             >
               Date of Birth
             </label>

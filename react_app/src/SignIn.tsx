@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
-    <div className="w-screen h-screen flex items-center justify-center relative">
+    <div className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
       {/* Pizza Images in 4 Corners */}
       {/* <img
         src="/pizza.png"
