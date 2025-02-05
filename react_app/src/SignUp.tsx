@@ -25,8 +25,8 @@ const SignUp = () => {
         alt="Pizza"
         className="absolute"
         style={{
-          bottom: -60,
-          left: -60,
+          bottom: -80,
+          left: -80,
           transform: "rotate(45deg)",
           width: "200px",
           height: "200px",

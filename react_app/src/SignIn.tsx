@@ -1,65 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { grid } from "ldrs";
+
+grid.register();
 
 const SignIn = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Pizza Images in 4 Corners */}
-      {/* <img
-        src="/pizza.png"
-        alt="Pizza"
-        className="absolute"
-        style={{
-          top: 0,
-          left: 0,
-          transform: "rotate(135deg)",
-          width: "50px",
-          height: "50px",
-          
-        }}
-      /> */}
+      {/* Background Decorations (Pizza & Donut Images) */}
       <img
         src="/pizza.svg"
         alt="Pizza"
         className="absolute"
-        
         style={{
           top: -80,
           right: -80,
           transform: "rotate(220deg)",
           width: "200px",
           height: "200px",
-          
         }}
       />
       <img
         src="/donut.svg"
-        alt="Pizza"
+        alt="Donut"
         className="absolute"
         style={{
-          bottom: -60,
-          left: -60,
+          bottom: -80,
+          left: -80,
           transform: "rotate(45deg)",
           width: "200px",
           height: "200px",
         }}
       />
-      {/* <img
-        src="/pizza.png"
-        alt="Pizza"
-        className="absolute"
-        style={{
-          bottom: 0,
-          right: 0,
-          transform: "translate(0, 0)",
-          width: "50px",
-          height: "50px",
-        }}
-      /> */}
 
       <div className="w-full h-full bg-white flex flex-col items-center justify-center space-y-8">
+        {/* **UniServe Title** */}
+        {/* <div className="text-center -mt-16">
+          <h1 className="font-grotesk font-extrabold text-6xl text-orange-800">
+            UniServe
+          </h1>
+        </div> */}
+
         {/* Welcome Text */}
-        <div className="w-9/12 h-1/6 -mt-20">
+        <div className="w-9/12 h-1/6">
           <p className="font-grotesk font-semibold text-5xl text-orange-700">
             Welcome
           </p>
@@ -85,10 +68,12 @@ const SignIn = () => {
         {/* Sign In Button */}
         <Link
           to="/"
-          className="bg-orange-800  rounded-full px-16 py-3 text-white font-semibold text-lg w-3/4 text-center font-grotesk"
+          className="bg-orange-800 rounded-full px-16 py-3 text-white font-semibold text-lg w-3/4 text-center font-grotesk"
         >
           Sign in
         </Link>
+
+        {/* Sign Up Link */}
         <p className="text-center text-gray-400">
           Create Account?{" "}
           <Link to="/signup" className="text-orange-700 font-semibold font-grotesk">
