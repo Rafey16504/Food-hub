@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const SignUp = () => {
-    const currentDate = new Date().toISOString().split("T")[0];
+  const currentDate = new Date().toISOString().split("T")[0];
   return (
     <div className="w-screen h-screen flex items-center justify-center relative">
       {/* Decorative SVGs */}
@@ -16,8 +16,8 @@ const SignUp = () => {
           top: -80,
           right: -80,
           transform: "rotate(220deg)",
-          width: "250px",
-          height: "250px",
+          width: "200px",
+          height: "200px",
         }}
       />
       <img
@@ -25,17 +25,17 @@ const SignUp = () => {
         alt="Pizza"
         className="absolute"
         style={{
-          bottom: -50,
-          left: -50,
+          bottom: -60,
+          left: -60,
           transform: "rotate(45deg)",
-          width: "220px",
-          height: "220px",
+          width: "200px",
+          height: "200px",
         }}
       />
 
       <div className="w-full h-full bg-white flex flex-col items-center justify-center space-y-8">
         {/* Welcome Text */}
-        <div className="w-9/12 h-1/6 -mt-20">
+        <div className="w-9/12 h-6/6">
           <p className="font-grotesk font-semibold text-5xl text-orange-700">
             Sign Up
           </p>
@@ -61,12 +61,21 @@ const SignUp = () => {
             placeholder="Password"
             className="bg-transparent border-b-2 border-gray-200 focus:outline-none focus:border-orange-500 w-full pb-2 font-grotesk"
           />
-          <input
-            type="date"
-            placeholder="Date of Birth"
-            max={currentDate}
-            className="bg-transparent border-b-2 border-gray-200 focus:outline-none focus:border-orange-500 w-full pb-2 font-grotesk text-gray-500"
-          />
+          <div className="relative w-full">
+            <label
+              htmlFor="dob"
+              className="absolute left-0 text-gray-500  -translate-y-5 scale-85 font-grotesk"
+            >
+              Date of Birth
+            </label>
+            <input
+              id="dob"
+              type="date"
+              max={currentDate}
+              className="peer bg-transparent border-b-2 border-gray-200 focus:outline-none focus:border-orange-500 w-full pb-2 font-grotesk text-gray-500"
+            />
+          </div>
+
           <input
             type="number"
             placeholder="Contact Number"
@@ -83,7 +92,10 @@ const SignUp = () => {
         </Link>
         <p className="text-center text-gray-400">
           Already have an account?{" "}
-          <Link to="/signin" className="text-orange-700 font-semibold font-grotesk">
+          <Link
+            to="/signin"
+            className="text-orange-700 font-semibold font-grotesk"
+          >
             Sign in
           </Link>
         </p>

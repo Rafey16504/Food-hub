@@ -27,8 +27,8 @@ const SignIn = () => {
           top: -80,
           right: -80,
           transform: "rotate(220deg)",
-          width: "250px",
-          height: "250px",
+          width: "200px",
+          height: "200px",
           
         }}
       />
@@ -37,11 +37,11 @@ const SignIn = () => {
         alt="Pizza"
         className="absolute"
         style={{
-          bottom: -50,
-          left: -50,
+          bottom: -60,
+          left: -60,
           transform: "rotate(45deg)",
-          width: "220px",
-          height: "220px",
+          width: "200px",
+          height: "200px",
         }}
       />
       {/* <img
