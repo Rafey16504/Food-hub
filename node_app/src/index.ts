@@ -1,11 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { appRouter } from './food_app';  // Assuming this file exports a router
-// import { client } from './db'; 
 import cors from 'cors';
 
 const app = express();
 const port = 8000;
+export const client = require('./db.ts')
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -24,4 +24,4 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
 
-// client.connect();
+client.connect();
